@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ElectroTech - Nhà cung cấp linh kiện điện tử, vi xử lý, cảm biến và IC bán dẫn chính hãng hàng đầu Việt Nam. Hỗ trợ tư vấn kỹ thuật 24/7.">
+  <meta name="keywords" content="linh kiện điện tử, vi xử lý, STM32, ESP32, cảm biến, IC bán dẫn, thiết bị điện tử, Arduino">
+  <title>ElectroTech - Linh Kiện Điện Tử Chính Hãng & Công Nghệ Mới</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Ambient Light Effects -->
+  <div class="bg-grid-pattern"></div>
+  <div class="ambient-light-1"></div>
+  <div class="ambient-light-2"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom py-3" id="mainNavbar">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center brand-logo" href="#">
+          <div class="bg-dark rounded-circle p-2 me-2 border border-info border-opacity-50 d-flex align-items-center justify-content-center" style="width: 42px; height: 42px;">
+            <i class="bi bi-cpu-fill text-info fs-4"></i>
+          </div>
+          <span class="fw-bold heading-tech">Electro<span class="text-gradient">Tech</span></span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2 text-info"></i>
+        </button>
+
+        <!-- Menu Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#hero">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Tính Năng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Linh Kiện Nổi Bật</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Về Chúng Tôi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Liên Hệ</a>
+            </li>
+          </ul>
+
+          <!-- Action Buttons & Cart -->
+          <div class="d-flex align-items-center gap-3">
+            <button type="button" class="btn btn-outline-tech position-relative p-2 px-3" id="cartBtn">
+              <i class="bi bi-cart3 fs-5"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info cart-badge" id="cartBadge">0</span>
+            </button>
+
+            <button type="button" class="btn btn-primary-tech" data-bs-toggle="modal" data-bs-target="#quoteModal">
+              <i class="bi bi-file-earmark-text me-1"></i> Báo Giá Ngay
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <!-- Left Text Content -->
+        <div class="col-lg-6">
+          <div class="badge-tech mb-3">
+            <i class="bi bi-shield-check me-1"></i> 100% Linh Kiện Chính Hãng • CO/CQ Đầy Đủ
+          </div>
+
+          <h1 class="display-4 fw-extrabold mb-4 text-white lh-sm">
+            Kỷ Nguyên Linh Kiện <br>
+            <span class="text-gradient">Điện Tử Thế Hệ Mới</span>
+          </h1>
+
+          <p class="lead text-muted mb-4 pe-lg-4 fs-6">
+            Chuyên cung cấp Vi xử lý, Cảm biến, IC bán dẫn, Module IoT và Phụ kiện điện tử cao cấp từ ST, Texas Instruments, NXP, Microchip. Đóng gói ESD an toàn, giao siêu tốc 24/7 cho Maker, Kỹ sư R&D và Nhà sản xuất.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-5">
+            <a href="#products" class="btn btn-primary-tech btn-lg">
+              <i class="bi bi-bag-check-fill me-2"></i> Khám Phá Linh Kiện
+            </a>
+            <button class="btn btn-outline-tech btn-lg" data-bs-toggle="modal" data-bs-target="#quoteModal">
+              <i class="bi bi-headset me-2"></i> Tư Vấn Kỹ Thuật
+            </button>
+          </div>
+
+          <!-- Hero Quick Stats -->
+          <div class="row g-4 hero-stats">
+            <div class="col-4">
+              <h3 class="fw-bold text-white mb-0 heading-tech text-gradient">15,000+</h3>
+              <p class="small text-muted mb-0">Mã linh kiện sẵn kho</p>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-white mb-0 heading-tech text-gradient">99.8%</h3>
+              <p class="small text-muted mb-0">Giao hàng đúng hẹn</p>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-white mb-0 heading-tech text-gradient">24/7</h3>
+              <p class="small text-muted mb-0">Hỗ trợ kỹ sư R&D</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Tech Illustration Graphic -->
+        <div class="col-lg-6">
+          <div class="tech-chip-card text-center position-relative">
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge floating-badge-1 d-flex align-items-center gap-2">
+              <span class="spinner-grow spinner-grow-sm text-info" role="status"></span>
+              <span class="text-info fw-semibold">STM32F4 Dual-Core</span>
+            </div>
+            
+            <div class="floating-badge floating-badge-2 d-flex align-items-center gap-2">
+              <i class="bi bi-cpu text-warning fs-5"></i>
+              <span class="text-light fw-semibold">ESP32-S3 Wi-Fi/BLE</span>
+            </div>
+
+            <!-- SVG Microchip Graphic -->
+            <svg class="img-fluid chip-glow-element" width="340" height="340" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="80" y="80" width="240" height="240" rx="24" fill="#0c1322" stroke="#00f2fe" stroke-width="3" stroke-dasharray="8 4"/>
+              <rect x="120" y="120" width="160" height="160" rx="16" fill="#131c31" stroke="#4facfe" stroke-width="2"/>
+              <!-- Microchip Core Logo -->
+              <circle cx="200" cy="200" r="45" fill="url(#chipGradient)" opacity="0.9"/>
+              <path d="M185 185L215 185L215 215L185 215Z" stroke="#ffffff" stroke-width="3" fill="none"/>
+              <path d="M200 170V185M200 215V230M170 200H185M215 200H230" stroke="#ffffff" stroke-width="3"/>
+              
+              <!-- Pins Top & Bottom -->
+              <g stroke="#00f2fe" stroke-width="3" stroke-linecap="round">
+                <line x1="140" y1="80" x2="140" y2="40"/>
+                <line x1="180" y1="80" x2="180" y2="40"/>
+                <line x1="220" y1="80" x2="220" y2="40"/>
+                <line x1="260" y1="80" x2="260" y2="40"/>
+
+                <line x1="140" y1="320" x2="140" y2="360"/>
+                <line x1="180" y1="320" x2="180" y2="360"/>
+                <line x1="220" y1="320" x2="220" y2="360"/>
+                <line x1="260" y1="320" x2="260" y2="360"/>
+                
+                <!-- Pins Left & Right -->
+                <line x1="80" y1="140" x2="40" y2="140"/>
+                <line x1="80" y1="180" x2="40" y2="180"/>
+                <line x1="80" y1="220" x2="40" y2="220"/>
+                <line x1="80" y1="260" x2="40" y2="260"/>
+
+                <line x1="320" y1="140" x2="360" y2="140"/>
+                <line x1="320" y1="180" x2="360" y2="180"/>
+                <line x1="320" y1="220" x2="360" y2="220"/>
+                <line x1="320" y1="260" x2="360" y2="260"/>
+              </g>
+
+              <defs>
+                <linearGradient id="chipGradient" x1="155" y1="155" x2="245" y2="245" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00f2fe"/>
+                  <stop offset="1" stop-color="#7f00ff"/>
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <div class="mt-4">
+              <h5 class="text-white fw-bold heading-tech mb-1">ElectroTech Core-X Series</h5>
+              <p class="small text-muted">Hệ sinh thái linh kiện vi mạch bán dẫn đạt chuẩn ISO 9001:2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION (3 Required Cards) -->
+  <section id="features" class="py-5 my-4">
+    <div class="container py-4">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <span class="section-tag">Ưu Thế Tối Ưu</span>
+        <h2 class="display-6 fw-bold text-white">Tính Năng Nổi Bật Tại ElectroTech</h2>
+        <p class="text-muted">Chúng tôi mang lại giải pháp toàn diện từ cung ứng sản phẩm chất lượng cao đến hỗ trợ phát triển sản phẩm điện tử chuyên nghiệp.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature Card 1 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-patch-check-fill"></i>
+            </div>
+            <h4 class="text-white fw-bold mb-3 fs-5">100% Linh Kiện Chính Hãng</h4>
+            <p class="text-muted mb-0">
+              Cam kết 100% linh kiện chính hãng nhập khẩu trực tiếp từ các hãng sản xuất hàng đầu thế giới (Texas Instruments, STMicroelectronics, Microchip, NXP). Đầy đủ hóa đơn chứng từ CO/CQ và datasheet chuẩn xác.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature Card 2 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-truck-front-fill"></i>
+            </div>
+            <h4 class="text-white fw-bold mb-3 fs-5">Giao Hàng Siêu Tốc 24/7</h4>
+            <p class="text-muted mb-0">
+              Hệ thống kho bãi lưu trữ an toàn tiêu chuẩn ESD (chống tĩnh điện). Đóng gói chống va đập chuyên dụng và hỗ trợ giao hỏa tốc toàn quốc trong 2-24 giờ để đảm bảo tiến độ dự án của bạn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h4 class="text-white fw-bold mb-3 fs-5">Bảo Hành & Tư Vấn Kỹ Thuật</h4>
+            <p class="text-muted mb-0">
+              Chính sách bảo hành 1 đổi 1 nhanh chóng. Đội ngũ kỹ sư điện tử giàu kinh nghiệm sẵn sàng hỗ trợ kiểm tra sơ đồ nguyên lý (Schematics), tư vấn chọn thay thế linh kiện tương đương hoàn toàn miễn phí.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS FEATURED SECTION -->
+  <section id="products" class="py-5 bg-dark bg-opacity-50">
+    <div class="container py-3">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
+        <div>
+          <span class="section-tag">Danh Mục Sản Phẩm</span>
+          <h2 class="display-6 fw-bold text-white mb-0">Linh Kiện Bán Chạy Nhất</h2>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="nav nav-pills mt-3 mt-md-0" id="productFilter">
+          <button class="nav-link product-filter-btn active" data-filter="all">Tất Cả</button>
+          <button class="nav-link product-filter-btn" data-filter="mcu">Vi Xử Lý / MCU</button>
+          <button class="nav-link product-filter-btn" data-filter="sensor">Cảm Biến</button>
+          <button class="nav-link product-filter-btn" data-filter="ic">IC & Bán Dẫn</button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-sm-6 col-lg-3 product-item" data-category="mcu">
+          <div class="product-card">
+            <div class="product-img-box">
+              <span class="badge bg-danger product-tag">HOT</span>
+              <i class="bi bi-cpu text-info display-2 my-3 d-block"></i>
+            </div>
+            <div class="product-body">
+              <span class="badge bg-dark border border-secondary text-muted mb-2 w-auto me-auto">STMicroelectronics</span>
+              <h6 class="text-white fw-bold mb-1">STM32F407VGT6 ARM Cortex-M4</h6>
+              <p class="small text-muted mb-3">168MHz, 1MB Flash, LQFP-100 Package</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <span class="product-price">185.000 đ</span>
+                <button class="btn btn-sm btn-outline-tech btn-add-cart" data-name="STM32F407VGT6">
+                  <i class="bi bi-cart-plus"></i> Thêm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-sm-6 col-lg-3 product-item" data-category="mcu">
+          <div class="product-card">
+            <div class="product-img-box">
+              <span class="badge bg-success product-tag">SẴN KHO</span>
+              <i class="bi bi-wifi text-warning display-2 my-3 d-block"></i>
+            </div>
+            <div class="product-body">
+              <span class="badge bg-dark border border-secondary text-muted mb-2 w-auto me-auto">Espressif</span>
+              <h6 class="text-white fw-bold mb-1">Module ESP32-WROOM-32U</h6>
+              <p class="small text-muted mb-3">Wi-Fi + BLE MCU Dual-core 240MHz</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <span class="product-price">85.000 đ</span>
+                <button class="btn btn-sm btn-outline-tech btn-add-cart" data-name="ESP32-WROOM-32U">
+                  <i class="bi bi-cart-plus"></i> Thêm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-sm-6 col-lg-3 product-item" data-category="sensor">
+          <div class="product-card">
+            <div class="product-img-box">
+              <span class="badge bg-info text-dark product-tag">NEW</span>
+              <i class="bi bi-activity text-success display-2 my-3 d-block"></i>
+            </div>
+            <div class="product-body">
+              <span class="badge bg-dark border border-secondary text-muted mb-2 w-auto me-auto">Bosch Sensortec</span>
+              <h6 class="text-white fw-bold mb-1">Cảm Biến BME280 Nhiệt Độ / Áp Suất</h6>
+              <p class="small text-muted mb-3">Độ chính xác cao I2C/SPI Interface</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <span class="product-price">120.000 đ</span>
+                <button class="btn btn-sm btn-outline-tech btn-add-cart" data-name="Cảm Biến BME280">
+                  <i class="bi bi-cart-plus"></i> Thêm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-sm-6 col-lg-3 product-item" data-category="ic">
+          <div class="product-card">
+            <div class="product-img-box">
+              <span class="badge bg-secondary product-tag">GIÁ TỐT</span>
+              <i class="bi bi-memory text-primary display-2 my-3 d-block"></i>
+            </div>
+            <div class="product-body">
+              <span class="badge bg-dark border border-secondary text-muted mb-2 w-auto me-auto">Texas Instruments</span>
+              <h6 class="text-white fw-bold mb-1">IC Khuếch Đại Thuật Toán NE5532P</h6>
+              <p class="small text-muted mb-3">Dual Low-Noise Op-Amp DIP-8</p>
+              <div class="mt-auto d-flex align-items-center justify-content-between">
+                <span class="product-price">18.000 đ</span>
+                <button class="btn btn-sm btn-outline-tech btn-add-cart" data-name="IC NE5532P Op-Amp">
+                  <i class="bi bi-cart-plus"></i> Thêm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & TRUST SECTION -->
+  <section id="about" class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 bg-dark border border-secondary border-opacity-25">
+            <span class="section-tag">Về ElectroTech</span>
+            <h2 class="display-6 fw-bold text-white mb-4">Đối Tác Tin Cậy Của Các Kỹ Sư & Doanh Nghiệp Điện Tử</h2>
+            <p class="text-muted mb-4">
+              ElectroTech được thành lập với mục tiêu trở thành cầu nối uy tín mang đến các sản phẩm linh kiện điện tử chính hãng, đạt tiêu chuẩn quốc tế cho cộng đồng kỹ sư R&D, nhà sản xuất IoT và Maker tại Việt Nam.
+            </p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill text-info fs-4"></i>
+                  <span class="text-light fw-medium">Đầy đủ chứng nhận CO/CQ</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill text-info fs-4"></i>
+                  <span class="text-light fw-medium">Đóng gói an toàn tiêu chuẩn ESD</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill text-info fs-4"></i>
+                  <span class="text-light fw-medium">Giá sỉ cạnh tranh cho nhà máy</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-3">
+                  <i class="bi bi-check-circle-fill text-info fs-4"></i>
+                  <span class="text-light fw-medium">Hỗ trợ kỹ thuật trực tiếp 24/7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 bg-gradient-dark-card border border-info border-opacity-25">
+            <h3 class="text-white fw-bold mb-3 heading-tech">Đăng Ký Nhận Bảng Giá Sỉ</h3>
+            <p class="text-muted mb-4">Nhận thông tin ưu đãi linh kiện mới và bảng giá chiết khấu dành cho đại lý & dự án doanh nghiệp.</p>
+            
+            <form id="newsletterForm" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận tin từ ElectroTech!'); this.reset();">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control form-control-tech" placeholder="Nhập email của bạn..." required>
+                <button class="btn btn-primary-tech" type="submit">Đăng Ký</button>
+              </div>
+              <p class="small text-muted mb-0"><i class="bi bi-lock me-1"></i> Chúng tôi bảo mật thông tin cá nhân của bạn 100%.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer-section">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <!-- Brand Info -->
+        <div class="col-lg-4">
+          <a href="#" class="d-inline-flex align-items-center brand-logo mb-3 text-decoration-none">
+            <i class="bi bi-cpu-fill text-info fs-3 me-2"></i>
+            <span class="fw-bold heading-tech text-white">Electro<span class="text-gradient">Tech</span></span>
+          </a>
+          <p class="text-muted mb-4">
+            Hệ thống cung cấp giải pháp linh kiện điện tử, bán dẫn và module nhúng hàng đầu Việt Nam. Chất lượng tối ưu - Dịch vụ tận tâm.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Github"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3 heading-tech">Chuyển Hướng</h6>
+          <ul class="list-unstyled">
+            <li><a href="#hero" class="footer-link">Trang Chủ</a></li>
+            <li><a href="#features" class="footer-link">Tính Năng</a></li>
+            <li><a href="#products" class="footer-link">Sản Phẩm</a></li>
+            <li><a href="#about" class="footer-link">Về Chúng Tôi</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 heading-tech">Linh Kiện Chính</h6>
+          <ul class="list-unstyled">
+            <li><a href="#products" class="footer-link">Vi xử lý & Microcontroller</a></li>
+            <li><a href="#products" class="footer-link">Cảm biến IoT & Công nghiệp</a></li>
+            <li><a href="#products" class="footer-link">IC Quản lý nguồn & Op-Amp</a></li>
+            <li><a href="#products" class="footer-link">Transistor, MOSFET & Diode</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3 heading-tech">Thông Tin Liên Hệ</h6>
+          <ul class="list-unstyled text-muted">
+            <li class="d-flex align-items-start mb-3">
+              <i class="bi bi-geo-alt-fill text-info me-2 mt-1"></i>
+              <span>Khu Công Nghệ Cao, Thành phố Thủ Đức, TP. Hồ Chí Minh</span>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone-fill text-info me-2"></i>
+              <span>Hotline: <strong class="text-white">1900 8888 / 0909 123 456</strong></span>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+              <i class="bi bi-envelope-fill text-info me-2"></i>
+              <span>Email: support@electrotech.vn</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="border-secondary border-opacity-25 my-4">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-muted">
+        <p class="mb-2 mb-md-0">© 2026 ElectroTech. Bảo lưu mọi quyền.</p>
+        <div>
+          <a href="#" class="text-muted me-3 text-decoration-none">Chính sách bảo mật</a>
+          <a href="#" class="text-muted text-decoration-none">Điều khoản dịch vụ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: YÊU CẦU BÁO GIÁ LINH KIỆN -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-content-tech">
+        <div class="modal-header">
+          <h5 class="modal-header-title text-white fw-bold mb-0" id="quoteModalLabel">
+            <i class="bi bi-file-earmark-text text-info me-2"></i> Yêu Cầu Báo Giá Linh Kiện
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="quickQuoteForm">
+            <div class="mb-3">
+              <label for="quoteName" class="form-label text-light small fw-medium">Họ và tên *</label>
+              <input type="text" class="form-control form-control-tech" id="quoteName" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div class="mb-3">
+              <label for="quoteContact" class="form-label text-light small fw-medium">Số điện thoại / Email *</label>
+              <input type="text" class="form-control form-control-tech" id="quoteContact" placeholder="0901234567 hoặc email@domain.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="quoteItems" class="form-label text-light small fw-medium">Danh sách mã linh kiện & số lượng *</label>
+              <textarea class="form-control form-control-tech" id="quoteItems" rows="3" placeholder="Ví dụ: STM32F407VGT6 (x50 cái), BME280 (x20 cái)..." required></textarea>
+            </div>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary-tech">
+                <i class="bi bi-send-fill me-2"></i> Gửi Yêu Cầu Báo Giá
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="techToast" class="toast align-items-center text-bg-dark border-info" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body text-info fw-semibold" id="toastMessage">
+          Thông báo từ hệ thống
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="btn btn-primary-tech position-fixed bottom-0 start-0 m-4 rounded-circle justify-content-center align-items-center" style="width: 45px; height: 45px; display: none; z-index: 1000;" aria-label="Trở về đầu trang">
+    <i class="bi bi-arrow-up fs-5"></i>
+  </button>
+
+  <!-- Bootstrap 5.3 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+/* 
+  ElectroTech Landing Page - Modern Dark Theme CSS
+  Author: Antigravity AI
+*/
+
+:root {
+  --bg-dark: #090d16;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(28, 38, 58, 0.85);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 242, 254, 0.4);
+  
+  --primary-glow: #00f2fe;
+  --secondary-glow: #4facfe;
+  --accent-purple: #7f00ff;
+  --accent-neon: #00ffaa;
+  
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  
+  --gradient-brand: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #00c6ff 100%);
+  --gradient-accent: linear-gradient(135deg, #00f2fe 0%, #7f00ff 100%);
+  --gradient-dark-card: linear-gradient(145deg, rgba(20, 27, 44, 0.8), rgba(10, 14, 26, 0.9));
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, .brand-font {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+}
+
+.heading-tech {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-glow);
+}
+
+/* Background Animated Grid */
+.bg-grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ambient-light-1 {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ambient-light-2 {
+  position: absolute;
+  top: 40%;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(127, 0, 255, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Text Styling */
+.text-gradient {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--primary-glow);
+}
+
+.brand-logo {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+.cart-badge {
+  font-size: 0.7rem;
+  padding: 0.25em 0.5em;
+}
+
+/* Buttons */
+.btn-primary-tech {
+  background: var(--gradient-brand);
+  color: #040914;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+}
+
+.btn-primary-tech:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 242, 254, 0.45);
+  color: #040914;
+}
+
+.btn-outline-tech {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-tech:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--primary-glow);
+  color: var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 120px 0 80px;
+  position: relative;
+}
+
+.badge-tech {
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  color: var(--primary-glow);
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
+
+.hero-stats {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+/* High Tech Illustration / Graphic Card */
+.tech-chip-card {
+  background: var(--gradient-dark-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.tech-chip-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-glow), transparent);
+  animation: scanline 4s linear infinite;
+}
+
+@keyframes scanline {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.chip-glow-element {
+  filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4));
+}
+
+.floating-badge {
+  position: absolute;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--border-glow);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  animation: floatAnim 4s ease-in-out infinite alternate;
+}
+
+.floating-badge-1 {
+  top: 10%;
+  right: -10px;
+}
+
+.floating-badge-2 {
+  bottom: 12%;
+  left: -15px;
+  animation-delay: -2s;
+}
+
+@keyframes floatAnim {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Feature Cards (3 Required Cards) */
+.feature-card {
+  background: var(--gradient-dark-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-brand);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-glow);
+  box-shadow: 0 15px 35px rgba(0, 242, 254, 0.12);
+}
+
+.feature-card:hover::after {
+  opacity: 1;
+}
+
+.feature-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: rgba(0, 242, 254, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: var(--primary-glow);
+  margin-bottom: 1.5rem;
+}
+
+/* Section Title Styling */
+.section-tag {
+  color: var(--primary-glow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Products Cards */
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.product-img-box {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.8rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.product-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-glow);
+}
+
+.nav-pills .nav-link {
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 30px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  margin: 0 0.25rem 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+  background: var(--gradient-brand);
+  color: #040914;
+  border-color: transparent;
+  font-weight: 600;
+}
+
+/* Modal Styling */
+.modal-content-tech {
+  background: #0f172a;
+  border: 1px solid var(--border-glow);
+  border-radius: 16px;
+  color: var(--text-main);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.form-control-tech {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.form-control-tech:focus {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: var(--primary-glow);
+  color: var(--text-main);
+  box-shadow: 0 0 0 0.25rem rgba(0, 242, 254, 0.15);
+}
+
+/* Contact Info & Footer */
+.footer-section {
+  background: #05080f;
+  border-top: 1px solid var(--border-color);
+  padding: 70px 0 30px;
+}
+
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.footer-link:hover {
+  color: var(--primary-glow);
+  transform: translateX(3px);
+}
+
+.social-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon-btn:hover {
+  background: var(--gradient-brand);
+  color: #040914;
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+/* Toast Container Floating */
+.toast-container {
+  z-index: 1090;
+}
