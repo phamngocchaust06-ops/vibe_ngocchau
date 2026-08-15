@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF7ED"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </radialGradient>
+    <linearGradient id="bunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#78350F" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="300" height="240" rx="16" fill="url(#bg)"/>
+  <ellipse cx="150" cy="205" rx="100" ry="14" fill="#000000" opacity="0.08"/>
+  
+  <g transform="translate(60, 45)" filter="url(#shadow)">
+    <!-- Top Bun -->
+    <path d="M15 75 C15 15 165 15 165 75 Z" fill="url(#bunGrad)"/>
+    <!-- Sesame Seeds -->
+    <ellipse cx="65" cy="40" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(-20 65 40)"/>
+    <ellipse cx="115" cy="35" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(25 115 35)"/>
+    <ellipse cx="90" cy="50" rx="3" ry="1.5" fill="#FEF3C7"/>
+    <ellipse cx="140" cy="55" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(15 140 55)"/>
+    <ellipse cx="40" cy="55" rx="3" ry="1.5" fill="#FEF3C7" transform="rotate(-15 40 55)"/>
+
+    <!-- Mayo -->
+    <path d="M25 75 Q 90 85 155 75" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Lettuce -->
+    <path d="M10 80 Q 30 70 50 85 Q 70 70 90 85 Q 110 70 130 85 Q 150 70 170 80" stroke="#22C55E" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+    <!-- Crispy Zinger Fillet -->
+    <path d="M15 95 Q 50 85 90 98 Q 130 85 165 95 L 160 115 Q 110 125 70 115 Q 40 125 20 115 Z" fill="#B45309"/>
+    <!-- Spicy red flecks -->
+    <circle cx="50" cy="105" r="3" fill="#DC2626"/>
+    <circle cx="120" cy="105" r="3" fill="#DC2626"/>
+
+    <!-- Bottom Bun -->
+    <path d="M20 120 L 160 120 C160 145 20 145 20 120 Z" fill="url(#bunGrad)"/>
+  </g>
+  <rect x="175" y="16" width="105" height="26" rx="13" fill="#EA580C"/>
+  <text x="227" y="33" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ZINGER BURGER</text>
+</svg>

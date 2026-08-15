@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </radialGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="60%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#78350F" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="300" height="240" rx="16" fill="url(#bg)"/>
+  <ellipse cx="150" cy="205" rx="100" ry="14" fill="#000000" opacity="0.08"/>
+  <g filter="url(#shadow)">
+    <!-- Wing 1 -->
+    <path d="M50 140 C50 90 90 70 130 110 C140 120 120 150 90 155 C65 160 50 155 50 140 Z" fill="url(#wingGrad)"/>
+    <!-- Wing 2 -->
+    <path d="M120 120 C130 70 180 60 210 95 C220 110 200 145 160 145 C135 145 120 135 120 120 Z" fill="url(#wingGrad)"/>
+    <!-- Wing 3 Center Top -->
+    <path d="M90 90 C100 45 150 40 175 75 C185 90 165 120 130 120 C105 120 90 105 90 90 Z" fill="url(#wingGrad)"/>
+    <!-- Highlights -->
+    <circle cx="100" cy="115" r="8" fill="#FDE68A" opacity="0.5"/>
+    <circle cx="155" cy="100" r="10" fill="#FDE68A" opacity="0.5"/>
+    <circle cx="140" cy="70" r="7" fill="#FDE68A" opacity="0.5"/>
+  </g>
+</svg>

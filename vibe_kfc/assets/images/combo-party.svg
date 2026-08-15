@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </radialGradient>
+  </defs>
+  <rect width="300" height="240" rx="16" fill="url(#bg)"/>
+  <ellipse cx="150" cy="205" rx="120" ry="14" fill="#000000" opacity="0.08"/>
+  <g transform="translate(30, 40)">
+    <!-- Big Bucket -->
+    <path d="M70 70 L 85 155 Q 125 162 165 155 L 180 70 Q 125 80 70 70 Z" fill="#FFFFFF" stroke="#E5E7EB"/>
+    <path d="M88 72 L 97 157 Q 110 160 125 160 L 120 74 Q 104 73 88 72 Z" fill="#E11D48"/>
+    <path d="M142 75 L 138 160 Q 152 160 164 157 L 173 73 Q 158 74 142 75 Z" fill="#E11D48"/>
+    <circle cx="105" cy="55" r="18" fill="#D97706"/>
+    <circle cx="135" cy="50" r="20" fill="#EA580C"/>
+    <circle cx="155" cy="62" r="16" fill="#D97706"/>
+
+    <!-- Burgers and Fries around -->
+    <g transform="translate(10, 100) scale(0.5)">
+      <path d="M20 60 Q 60 15 100 60 Z" fill="#F59E0B"/>
+      <rect x="15" y="60" width="90" height="10" rx="5" fill="#22C55E"/>
+      <rect x="18" y="70" width="84" height="15" rx="4" fill="#991B1B"/>
+      <rect x="20" y="85" width="80" height="18" rx="8" fill="#F59E0B"/>
+    </g>
+    <g transform="translate(180, 95) scale(0.5)">
+      <path d="M20 60 Q 60 15 100 60 Z" fill="#F59E0B"/>
+      <rect x="15" y="60" width="90" height="10" rx="5" fill="#22C55E"/>
+      <rect x="18" y="70" width="84" height="15" rx="4" fill="#991B1B"/>
+      <rect x="20" y="85" width="80" height="18" rx="8" fill="#F59E0B"/>
+    </g>
+  </g>
+  <rect x="175" y="16" width="105" height="26" rx="13" fill="#2563EB"/>
+  <text x="227" y="33" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">TIỆC NHÓM 🎉</text>
+</svg>
