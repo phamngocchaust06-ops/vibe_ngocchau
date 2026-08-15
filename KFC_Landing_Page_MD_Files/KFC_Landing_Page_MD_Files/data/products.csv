@@ -1,0 +1,11 @@
+id,name,category,description,price,image,badge,featured
+P001,Combo Gà Giòn Tiệc Tùng,combo,4 miếng gà giòn kèm 1 khoai lớn và 2 ly nước ngọt,159000,assets/images/combo-01.jpg,Best Seller,true
+P002,Gà Rán Giòn Cay Đặc Biệt,ga-ran,Miếng gà tẩm ướp cay nồng chiên giòn rụm nóng hổi,45000,assets/images/chicken-spicy.jpg,Đậm Vị Cay,true
+P003,Burger Gà Giòn Phô Mai,burger,Burger gà chiên xù phô mai cheddar tan chảy cùng sốt sốt kem,69000,assets/images/burger-01.jpg,Yêu Thích,true
+P004,Gà Rán Truyền Thống,ga-ran,Gà tẩm 11 loại thảo mộc và gia vị công thức bí truyền giòn tan,42000,assets/images/chicken-01.jpg,Truyền Thống,false
+P005,Combo Đôi Bạn Thân,combo,2 miếng gà giòn rụm 1 burger gà 1 khoai và 2 nước ngọt,129000,assets/images/combo-02.jpg,Tiết Kiệm 25%,true
+P006,Burger Tôm Hoàng Gia,burger,Thịt tôm tươi giòn ngọt cùng sốt tartar béo ngậy thanh mát,65000,assets/images/burger-02.jpg,Món Mới,false
+P007,Khoai Tây Chiên Lắc Phô Mai,side,Khoai tây chiên vàng giòn phủ lớp bột phô mai thơm lừng,39000,assets/images/fries-01.jpg,Ăn Vặt Hot,false
+P008,Gà Popcorn Lắc Bột Ớt,side,Gà viên không xương giòn rụm vừa ăn thơm nồng cuốn hút,49000,assets/images/popcorn-01.jpg,Best Seller,false
+P009,Combo Solo Giòn Rụm,combo,1 miếng gà giòn nóng 1 khoai vừa và 1 ly nước mát lạnh,69000,assets/images/combo-01.jpg,Bữa Trưa Nhanh,false
+P010,Trà Đào Hạt Chia Mát Lạnh,drink,Trà đào thanh mát giải nhiệt cùng hạt chia giòn sần sật,29000,assets/images/drink-01.jpg,Thanh Mát,false

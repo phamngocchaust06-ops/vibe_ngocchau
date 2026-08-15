@@ -1,0 +1,316 @@
+/* ==========================================================================
+   Module 2: Thanh Toán (Checkout & Payment Module)
+   Design System Compliance: KFC Red (#E4002B), Outfit & Plus Jakarta Sans
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Checkout Container & Layout Grid
+   -------------------------------------------------------------------------- */
+.checkout-modal-box {
+  background: var(--color-surface);
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  max-height: 92vh;
+  max-height: 92dvh;
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .checkout-modal-box {
+    padding: 20px 16px;
+  }
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+@media (min-width: 860px) {
+  .checkout-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+  }
+}
+
+.checkout-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkout-section-title span.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   2. Payment Method Selector Cards
+   -------------------------------------------------------------------------- */
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 520px) {
+  .payment-methods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.payment-card {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  user-select: none;
+}
+
+.payment-card:hover {
+  border-color: rgba(228, 0, 43, 0.4);
+  background-color: var(--color-primary-light);
+}
+
+.payment-card.active {
+  border-color: var(--color-primary);
+  background-color: #FFF0F2;
+  box-shadow: 0 4px 14px rgba(228, 0, 43, 0.18);
+}
+
+.payment-card-icon {
+  font-size: 1.8rem;
+}
+
+.payment-card-title {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+}
+
+.payment-card-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.payment-card.active::after {
+  content: '✓';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------
+   3. VietQR & E-Wallet Box
+   -------------------------------------------------------------------------- */
+.vietqr-box {
+  background: #FFFFFF;
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.vietqr-qr-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 14px auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  object-fit: contain;
+}
+
+.bank-info-table {
+  width: 100%;
+  font-size: 0.85rem;
+  text-align: left;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.bank-info-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--color-surface-alt);
+}
+
+.bank-info-table td:first-child {
+  color: var(--color-text-muted);
+  width: 40%;
+}
+
+.bank-info-table td:last-child {
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+/* --------------------------------------------------------------------------
+   4. Order Summary Card Sidebar
+   -------------------------------------------------------------------------- */
+.checkout-summary-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkout-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.checkout-item-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.checkout-item-name {
+  font-weight: 600;
+  color: var(--color-text-main);
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.checkout-item-price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. Receipt & Invoice Confirmation View
+   -------------------------------------------------------------------------- */
+.receipt-container {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.receipt-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #ECFDF5;
+  color: #059669;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+  animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.receipt-code-badge {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.receipt-table th {
+  background-color: var(--color-surface-alt);
+  padding: 10px 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text-main);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.receipt-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.receipt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Validation Feedback */
+.form-input-error {
+  border-color: #DC2626 !important;
+  background-color: #FEF2F2 !important;
+}
+
+.form-error-msg {
+  font-size: 0.76rem;
+  color: #DC2626;
+  margin-top: 4px;
+  display: block;
+}

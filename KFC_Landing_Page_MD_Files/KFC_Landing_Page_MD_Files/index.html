@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KFC Gà Rán — Giòn Rụm Từng Miếng, Ngon Mê Từng Khoảnh Khắc</title>
+  <meta name="description" content="Thưởng thức gà rán nóng giòn chuẩn vị, combo tiệc tùng và burger thơm ngon cùng nhiều ưu đãi hấp dẫn mỗi ngày. Đặt món giao nhanh nóng hổi!" />
+  <meta name="keywords" content="KFC, gà rán, combo gà rán, burger gà, đồ ăn nhanh, gà giòn cay, fast food" />
+  <meta property="og:title" content="KFC Gà Rán — Giòn Rụm Từng Miếng, Ngon Mê Từng Khoảnh Khắc" />
+  <meta property="og:description" content="Khám phá thực đơn gà rán thơm lừng nóng hổi, combo bạn thân và ưu đãi demo hấp dẫn." />
+  <meta property="og:image" content="assets/images/hero-bucket.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Core & Module Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/checkout.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. Header & Navigation (Sticky)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#hero" class="logo" aria-label="Trang chủ KFC">
+        <span class="logo-badge">KFC</span>
+        <span class="logo-text">CRISPY<span>CHICKEN</span></span>
+      </a>
+
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+          <li><a href="#usp" class="nav-link">Lợi ích</a></li>
+          <li><a href="#menu" class="nav-link">Thực đơn</a></li>
+          <li><a href="#promotion" class="nav-link">Ưu đãi</a></li>
+          <li><a href="#reviews" class="nav-link">Đánh giá</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Cart Trigger Button in Header -->
+        <button type="button" class="header-cart-btn js-cart-trigger" aria-label="Mở giỏ hàng">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="headerCartBadge" style="display: none;">0</span>
+        </button>
+
+        <a href="#menu" class="btn btn-primary btn-sm header-cta-btn">
+          <span>Đặt món ngay</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu điều hướng" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-label="Menu di động">
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link">Trang chủ</a></li>
+      <li><a href="#usp" class="mobile-nav-link">Lợi ích đặc biệt</a></li>
+      <li><a href="#menu" class="mobile-nav-link">Thực đơn món ngon</a></li>
+      <li><a href="#promotion" class="mobile-nav-link">Chương trình ưu đãi</a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Khách hàng đánh giá</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+      <button type="button" class="btn btn-secondary btn-block js-cart-trigger" style="justify-content: center;">
+        <span>🛒 Mở Giỏ Hàng (<span class="cart-badge" style="position: static; display: inline-flex; margin-left: 6px;">0</span>)</span>
+      </button>
+      <a href="#menu" class="btn btn-primary btn-block">
+        <span>Xem thực đơn</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         2. Hero Section
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-eyebrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+              </svg>
+              <span>GÀ RÁN NÓNG GIÒN 100%</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Giòn rụm từng miếng.<br />
+              <span>Ngon mê</span> từng khoảnh khắc.
+            </h1>
+            
+            <p class="hero-description">
+              Thưởng thức những phần gà nóng giòn cùng combo hấp dẫn cho bữa ăn nhanh, vui và đầy hứng khởi cùng bạn bè và gia đình.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#menu" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span>Đặt món ngay</span>
+              </a>
+              
+              <a href="#menu" class="btn btn-secondary">
+                <span>Xem thực đơn</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Gà tươi mỗi ngày</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">11+</span>
+                <span class="stat-label">Gia vị bí truyền</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">15 Phút</span>
+                <span class="stat-label">Giao nóng tận tay</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-card">
+              <img 
+                src="assets/images/hero-bucket.jpg" 
+                alt="Xô gà rán giòn rụm nóng hổi" 
+                width="640" 
+                height="400"
+                onerror="this.onerror=null; this.src='assets/images/combo-01.jpg';"
+              />
+              <div class="hero-floating-badge">
+                <div class="floating-icon">🍗</div>
+                <div>
+                  <div class="floating-text-title">Vừa Chiên Nóng Hổi</div>
+                  <div class="floating-text-subtitle">Lớp da giòn tan 100%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. USP / Key Benefits
+         ========================================================================== -->
+    <section class="section usp-section" id="usp">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">TẠI SAO CHỌN CHÚNG TÔI</span>
+          <h2 class="section-title">Hương Vị Giòn Tan Khó Cưỡng</h2>
+          <p class="section-description">Mỗi miếng gà là sự kết hợp hoàn hảo giữa công thức tẩm ướp độc quyền và kỹ thuật chiên chuẩn mực.</p>
+        </div>
+
+        <div class="usp-grid">
+          <div class="usp-card">
+            <div class="usp-icon-wrap">🔥</div>
+            <h3 class="usp-title">01 — Nóng Giòn Chuẩn Vị</h3>
+            <p class="usp-desc">Gà được phục vụ ngay khi vừa chiên xong, vỏ ngoài giòn rụm khó cưỡng, thịt bên trong mềm mọng nước.</p>
+          </div>
+
+          <div class="usp-card">
+            <div class="usp-icon-wrap">🍔</div>
+            <h3 class="usp-title">02 — Combo Đa Dạng</h3>
+            <p class="usp-desc">Nhiều lựa chọn phong phú cho một người, cặp đôi bạn thân, nhóm bạn tụ tập và bữa tiệc gia đình.</p>
+          </div>
+
+          <div class="usp-card">
+            <div class="usp-icon-wrap">🎉</div>
+            <h3 class="usp-title">03 — Ăn Vui, Chia Sẻ Dễ</h3>
+            <p class="usp-desc">Những combo tiện lợi thiết kế thông minh, dễ dàng sẻ chia niềm vui ẩm thực cùng những người thân yêu.</p>
+          </div>
+
+          <div class="usp-card">
+            <div class="usp-icon-wrap">🎁</div>
+            <h3 class="usp-title">04 — Ưu Đãi Hấp Dẫn</h3>
+            <p class="usp-desc">Liên tục cập nhật các chương trình giảm giá, tặng kèm voucher và freeship cho mọi đơn hàng.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. Dynamic Menu Section (CSV Powered)
+         ========================================================================== -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">THỰC ĐƠN ĐA DẠNG</span>
+          <h2 class="section-title">Chọn Món Bạn Yêu Thích</h2>
+          <p class="section-description">Khám phá các món gà giòn, burger, khoai tây và combo tiệc tùng được chế biến nóng hổi mỗi ngày.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filter-container" role="tablist" aria-label="Bộ lọc thực đơn">
+          <button type="button" class="filter-btn active js-filter-btn" data-category="all">
+            <span>Tất cả món</span>
+          </button>
+          <button type="button" class="filter-btn js-filter-btn" data-category="combo">
+            <span>🍗 Combo Siêu Tiết Kiệm</span>
+          </button>
+          <button type="button" class="filter-btn js-filter-btn" data-category="ga-ran">
+            <span>🔥 Gà Rán Giòn Cay</span>
+          </button>
+          <button type="button" class="filter-btn js-filter-btn" data-category="burger">
+            <span>🍔 Burger Thơm Ngon</span>
+          </button>
+          <button type="button" class="filter-btn js-filter-btn" data-category="side">
+            <span>🍟 Món Kèm Giòn Rụm</span>
+          </button>
+          <button type="button" class="filter-btn js-filter-btn" data-category="drink">
+            <span>🥤 Đồ Uống Mát Lạnh</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="products-grid" id="productsGrid" aria-live="polite">
+          <!-- Rendered dynamically by js/app.js from data/products.csv -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. Promotion Banner Section
+         ========================================================================== -->
+    <section class="section promo-section" id="promotion">
+      <div class="container">
+        <div class="promo-banner-card">
+          <div class="promo-banner-grid">
+            <div>
+              <span class="promo-tag">ƯU ĐÃI ĐẶC BIỆT HÔM NAY</span>
+              <h2 class="promo-title">Ưu Đãi Hôm Nay, Ngon Hơn Mỗi Ngày!</h2>
+              <p class="promo-desc">
+                Áp dụng ngay mã giảm giá đặc quyền để nhận ưu đãi giảm 30% cho tất cả các Combo Tiệc Tùng và Combo Bạn Thân.
+              </p>
+              <a href="#menu" class="btn btn-accent">
+                <span>Xem ưu đãi & Đặt món</span>
+              </a>
+            </div>
+
+            <div class="promo-coupon-box">
+              <span class="coupon-label">MÃ KHUYẾN MÃI DEMO</span>
+              <div class="coupon-code-wrap">
+                <span class="coupon-code" id="promoCodeText">GIONRUM2026</span>
+                <button type="button" class="btn-copy-code" id="btnCopyCoupon">Sao chép</button>
+              </div>
+              <span style="font-size: 0.8rem; opacity: 0.85;">Giảm ngay 30% cho đơn từ 99.000₫</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. Social Proof / Customer Reviews (Demo Labeled)
+         ========================================================================== -->
+    <section class="section social-proof-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">CẢM NHẬN KHÁCH HÀNG</span>
+          <h2 class="section-title">Bữa Ăn Ngon Hơn Khi Có Người Cùng Thưởng Thức</h2>
+          <p class="section-description">Lắng nghe những trải nghiệm chân thực từ các tín đồ đam mê gà rán giòn tan nóng hổi.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="badge badge-demo">Demo</span>
+            </div>
+            <p class="review-quote">
+              "Gà giòn rụm bên ngoài, thịt mềm mọng nước bên trong. Combo tiệc tùng 4 người ăn no nê mà giá lại siêu hợp lý!"
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">MA</div>
+              <div class="author-info">
+                <span class="author-name">Minh Anh</span>
+                <span class="author-tag">Đã đặt Combo Tiệc Tùng</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="badge badge-demo">Demo</span>
+            </div>
+            <p class="review-quote">
+              "Burger gà giòn phô mai siêu đỉnh, phô mai béo ngậy kèm vỏ gà giòn rụm. Đặt giao hàng đến mà hộp vẫn còn bốc khói nghi ngút."
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">HL</div>
+              <div class="author-info">
+                <span class="author-name">Hoàng Long</span>
+                <span class="author-tag">Đã đặt Burger Gà Giòn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-stars">★★★★★</div>
+              <span class="badge badge-demo">Demo</span>
+            </div>
+            <p class="review-quote">
+              "Khoai tây chiên lắc phô mai và gà cay là combo bất bại của nhóm mình mỗi khi tụ tập cày phim cuối tuần. Rất đáng thử!"
+            </p>
+            <div class="review-author">
+              <div class="author-avatar">TL</div>
+              <div class="author-info">
+                <span class="author-name">Thuỳ Linh</span>
+                <span class="author-tag">Đã đặt Gà Rán Giòn Cay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. Final CTA Section
+         ========================================================================== -->
+    <section class="final-cta-section" id="contact">
+      <div class="container">
+        <div class="final-cta-box">
+          <h2 class="final-cta-title">Đói rồi? Đặt món thôi!</h2>
+          <p class="final-cta-desc">
+            Chọn ngay món ăn yêu thích và bắt đầu bữa ăn giòn rụm, vui vẻ cùng bạn bè và người thân ngay bây giờ.
+          </p>
+          <div class="final-cta-actions">
+            <a href="#menu" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>Đặt món ngay</span>
+            </a>
+            <a href="tel:19006886" class="hotline-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Hotline: 1900 6886</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       8. Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-badge">KFC</span>
+            <span class="logo-text">CRISPY<span>CHICKEN</span></span>
+          </div>
+          <p class="footer-about">
+            Thương hiệu gà rán giòn rụm mang đến trải nghiệm ẩm thực chất lượng, nhanh chóng và tràn đầy năng lượng mỗi ngày.
+          </p>
+          <p style="font-size: 0.78rem; color: #6B7280;">
+            * Trang landing page xây dựng phục vụ mục đích học tập & demo Vibe Coding với Antigravity.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Khám phá</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#usp">Lợi ích đặc biệt</a></li>
+            <li><a href="#menu">Thực đơn đầy đủ</a></li>
+            <li><a href="#promotion">Mã khuyến mãi</a></li>
+            <li><a href="#reviews">Đánh giá khách hàng</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Danh mục</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Gà Rán Giòn Cay</a></li>
+            <li><a href="#menu">Combo Tiết Kiệm</a></li>
+            <li><a href="#menu">Burger Phô Mai</a></li>
+            <li><a href="#menu">Khoai Tây Chiên</a></li>
+            <li><a href="#menu">Đồ Uống Mát Lạnh</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Hỗ trợ & Đặt hàng</h4>
+          <p style="margin-bottom: 8px;">Tổng đài giao hàng: <strong style="color: #fff;">1900 6886</strong></p>
+          <p style="margin-bottom: 8px;">Giờ mở cửa: <strong style="color: #fff;">09:00 — 22:00</strong></p>
+          <p style="font-size: 0.85rem; color: #9CA3AF;">Giao hàng tận nơi nóng giòn trong 15-30 phút.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 KFC Crispy Chicken Landing Page Demo. Xây dựng với Vibe Coding & Antigravity.</p>
+        <p>Phiên bản Demo HTML5 / CSS3 / JavaScript thuần (No Backend)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       9. Floating Cart Quick Access Button
+       ========================================================================== -->
+  <button type="button" class="floating-cart-btn js-cart-trigger" id="floatingCartBtn" aria-label="Mở giỏ hàng nhanh" style="display: none;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+    <span class="floating-cart-label">Giỏ Hàng</span>
+    <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+  </button>
+
+  <!-- ==========================================================================
+       10. Slide-over Cart Drawer (Module 1)
+       ========================================================================== -->
+  <div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="cartHeaderTitle">
+    <div class="cart-drawer" id="cartDrawer">
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <div class="cart-header-left">
+          <h3 class="cart-header-title" id="cartHeaderTitle">Giỏ Hàng</h3>
+          <span class="cart-header-count" id="cartHeaderCount">0 món</span>
+        </div>
+        <button type="button" class="cart-close-btn" id="cartCloseBtn" aria-label="Đóng giỏ hàng">✕</button>
+      </div>
+
+      <!-- Cart Body (Scrollable items / Empty state) -->
+      <div class="cart-body" id="cartBody">
+        <!-- Rendered dynamically by js/cart.js -->
+      </div>
+
+      <!-- Cart Footer Summary & Checkout -->
+      <div class="cart-footer" id="cartFooter" style="display: none;">
+        <div class="cart-summary-rows">
+          <div class="summary-row">
+            <span>Tạm tính:</span>
+            <span id="cartSubtotal" style="font-weight: 700;">0 ₫</span>
+          </div>
+          <div class="summary-row" id="cartDiscountRow" style="display: none;">
+            <span>Ưu đãi voucher:</span>
+            <span id="cartDiscount" class="discount-amount">-0 ₫</span>
+          </div>
+          <div class="summary-row">
+            <span>Phí giao hàng:</span>
+            <span style="color: #059669; font-weight: 700;">Miễn phí (Demo)</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Tổng thanh toán:</span>
+            <span id="cartTotal" class="total-amount">0 ₫</span>
+          </div>
+        </div>
+
+        <button type="button" class="cart-checkout-btn" id="cartCheckoutBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Tiến Hành Đặt Hàng</span>
+        </button>
+
+        <button type="button" class="cart-clear-btn" id="cartClearBtn">
+          Xoá tất cả món trong giỏ
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       11. Order Detail Modal (Quick View & Add to Cart)
+       ========================================================================== -->
+  <div class="modal-overlay" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng cửa sổ">✕</button>
+      <img id="modalImg" src="assets/images/placeholder.jpg" alt="Chi tiết món ăn" class="modal-product-img" />
+      <h3 id="modalTitle" class="modal-product-title">Tên món ăn</h3>
+      <p id="modalDesc" class="modal-product-desc">Mô tả món ăn</p>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <span style="font-weight: 700; font-size: 0.95rem;">Số lượng:</span>
+        <div class="qty-control">
+          <button type="button" class="qty-btn" id="qtyMinus" aria-label="Giảm số lượng">-</button>
+          <span class="qty-number" id="qtyNumber">1</span>
+          <button type="button" class="qty-btn" id="qtyPlus" aria-label="Tăng số lượng">+</button>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid var(--color-border); margin-bottom: 20px;">
+        <span style="font-weight: 700; font-size: 1.05rem;">Tổng cộng:</span>
+        <div id="modalPrice" class="modal-product-price" style="margin-bottom: 0;">0 ₫</div>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-block" id="modalConfirmBtn">
+        <span>Thêm Vào Giỏ Hàng</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       12. Module 2: Checkout & Payment Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="checkout-modal-box">
+      <button type="button" class="modal-close-btn" id="checkoutCloseBtn" aria-label="Đóng">✕</button>
+
+      <!-- View 1: Step 1 Checkout & Payment Form -->
+      <div id="checkoutFormView">
+        <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--color-border);">
+          <span style="font-size: 1.8rem;">💳</span>
+          <div>
+            <h3 id="checkoutTitle" class="modal-product-title" style="margin-bottom: 2px;">Thanh Toán & Đặt Hàng</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Hoàn tất thông tin để lưu đơn hàng vào CSDL SQLite (orders.db)</p>
+          </div>
+        </div>
+
+        <form id="checkoutForm">
+          <div class="checkout-grid">
+            <!-- Left Column: Shipping Info & Payment Methods -->
+            <div>
+              <!-- Step 1: Customer Shipping Info -->
+              <div class="checkout-section-title">
+                <span class="step-num">1</span>
+                <span>Thông Tin Nhận Hàng</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                <div>
+                  <label for="checkoutName" style="display: block; font-weight: 700; font-size: 0.86rem; margin-bottom: 4px;">Họ và Tên Người Nhận <span style="color: var(--color-primary);">*</span></label>
+                  <input type="text" id="checkoutName" required placeholder="Nguyễn Văn A" class="promo-input" style="width: 100%; text-transform: none;" />
+                </div>
+
+                <div>
+                  <label for="checkoutPhone" style="display: block; font-weight: 700; font-size: 0.86rem; margin-bottom: 4px;">Số Điện Thoại Nhận Hàng <span style="color: var(--color-primary);">*</span></label>
+                  <input type="tel" id="checkoutPhone" required placeholder="0901234567" class="promo-input" style="width: 100%; text-transform: none;" />
+                </div>
+
+                <div>
+                  <label for="checkoutAddress" style="display: block; font-weight: 700; font-size: 0.86rem; margin-bottom: 4px;">Địa Chỉ Giao Hàng Cụ Thể <span style="color: var(--color-primary);">*</span></label>
+                  <input type="text" id="checkoutAddress" required placeholder="Số 123 Đường Nguyễn Trãi, Phường 2, Quận 1, TP.HCM" class="promo-input" style="width: 100%; text-transform: none;" />
+                </div>
+
+                <div>
+                  <label for="checkoutNote" style="display: block; font-weight: 700; font-size: 0.86rem; margin-bottom: 4px;">Ghi Chú Giao Hàng (Tùy chọn)</label>
+                  <input type="text" id="checkoutNote" placeholder="Giao giờ hành chính, gọi trước 15 phút..." class="promo-input" style="width: 100%; text-transform: none;" />
+                </div>
+              </div>
+
+              <!-- Step 2: Payment Method Selection -->
+              <div class="checkout-section-title">
+                <span class="step-num">2</span>
+                <span>Phương Thức Thanh Toán</span>
+              </div>
+
+              <div class="payment-methods-grid">
+                <div class="payment-card js-payment-card active" data-method="COD">
+                  <span class="payment-card-icon">💵</span>
+                  <span class="payment-card-title">Tiền Mặt (COD)</span>
+                  <span class="payment-card-sub">Khi nhận hàng</span>
+                </div>
+
+                <div class="payment-card js-payment-card" data-method="BANK_TRANSFER">
+                  <span class="payment-card-icon">💳</span>
+                  <span class="payment-card-title">Chuyển Khoản</span>
+                  <span class="payment-card-sub">Mã VietQR</span>
+                </div>
+
+                <div class="payment-card js-payment-card" data-method="MOMO">
+                  <span class="payment-card-icon">📱</span>
+                  <span class="payment-card-title">Ví MoMo</span>
+                  <span class="payment-card-sub">Quét mã nhanh</span>
+                </div>
+              </div>
+
+              <!-- Payment Note -->
+              <p id="paymentMethodNote" style="font-size: 0.82rem; color: var(--color-text-muted); background: var(--color-bg); padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--color-border); margin-bottom: 16px;">
+                Thanh toán bằng tiền mặt cho shipper khi nhận được gà rán nóng hổi.
+              </p>
+
+              <!-- Dynamic VietQR / E-Wallet Box -->
+              <div class="vietqr-box" id="vietqrBox" style="display: none;">
+                <h4 id="qrTitle" style="font-family: var(--font-heading); font-size: 1rem; font-weight: 800; color: var(--color-primary); margin-bottom: 10px;">Quét Mã Quét Thanh Toán VietQR</h4>
+                <img id="qrImage" src="assets/images/placeholder.jpg" alt="Mã VietQR Thanh Toán" class="vietqr-qr-img" />
+                
+                <table class="bank-info-table">
+                  <tbody>
+                    <tr>
+                      <td>Ngân hàng:</td>
+                      <td id="qrBankName">Vietcombank (VCB)</td>
+                    </tr>
+                    <tr>
+                      <td>Số tài khoản:</td>
+                      <td id="qrAccNum">1900 6886 99</td>
+                    </tr>
+                    <tr>
+                      <td>Chủ tài khoản:</td>
+                      <td id="qrAccHolder">KFC VIETNAM DEMO</td>
+                    </tr>
+                    <tr>
+                      <td>Số tiền:</td>
+                      <td id="qrAmount" style="color: var(--color-primary); font-size: 0.95rem;">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td>Cú pháp chuyển:</td>
+                      <td id="qrTransferNote" style="color: #2563EB;">KFC8942</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Right Column: Order Summary Sidebar -->
+            <div class="checkout-summary-card">
+              <h4 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; color: var(--color-text-main);">Tóm Tắt Đơn Hàng</h4>
+
+              <div class="checkout-items-list" id="checkoutSummaryList">
+                <!-- Rendered dynamically by js/checkout.js -->
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; padding-top: 10px; border-top: 1px solid var(--color-border);">
+                <div style="display: flex; justify-content: space-between; color: var(--color-text-muted);">
+                  <span>Tạm tính:</span>
+                  <span id="chkSubtotal" style="font-weight: 700; color: var(--color-text-main);">0 ₫</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; color: #059669;">
+                  <span>Giảm giá voucher:</span>
+                  <span id="chkDiscount" style="font-weight: 700;">-0 ₫</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; color: var(--color-text-muted);">
+                  <span>Phí giao hàng:</span>
+                  <span style="color: #059669; font-weight: 700;">Miễn phí</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 800; padding-top: 8px; border-top: 1px dashed var(--color-border); color: var(--color-text-main);">
+                  <span>Tổng cộng:</span>
+                  <span id="chkTotal" style="color: var(--color-primary); font-family: var(--font-heading);"><strong id="checkoutFinalTotal">0 ₫</strong></span>
+                </div>
+              </div>
+
+              <div style="background: #ECFDF5; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid #A7F3D0; font-size: 0.78rem; color: #065F46; font-weight: 600;">
+                ✓ Tự động ghi vào SQLite `orders.db` (`orders` & `order_items`)
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+                <button type="submit" class="btn btn-primary btn-block" style="justify-content: center; padding: 14px;">
+                  <span>Xác Nhận & Thanh Toán</span>
+                </button>
+                <button type="button" class="btn btn-secondary btn-block" id="checkoutCancelBtn" style="justify-content: center;">
+                  <span>Hủy bỏ</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- View 2: Step 2 Confirmation Receipt View -->
+      <div id="receiptView" style="display: none;">
+        <!-- Rendered dynamically by js/checkout.js on order completion -->
+      </div>
+    </div>
+  </div>
+
+  <!-- sql.js (WebAssembly SQLite Engine) & JavaScript Modules -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
